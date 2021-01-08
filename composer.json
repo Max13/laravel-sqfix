@@ -1,23 +1,23 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "max13/laravel-sqfix",
+    "description": "Laravel package fixing SQLite Schema grammar",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "max13",
+        "laravel-sqfix"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/max13/laravel-sqfix",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": ":author_homepage",
+            "name": "Adnan RIHAN",
+            "email": "adnan@rihan.fr",
+            "homepage": "https://adnan.rihan.fr/",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.4|^8.0",
-        "illuminate/contracts": "^8.0"
+        "php": "^7.3|^7.4|^8.0",
+        "illuminate/contracts": "^7.0|^8.0"
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
@@ -25,13 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src",
-            "Spatie\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Mx\\Sqfix\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Mx\\Sqfix\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -45,11 +44,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
-            }
+                "Mx\\Sqfix\\SqfixServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
@@ -57,11 +53,11 @@
     "funding": [
         {
             "type": "github",
-            "url": "https://github.com/sponsors/:vendor_name"
+            "url": "https://github.com/sponsors/max13"
         },
         {
             "type": "other",
-            "url": ":author_homepage"
+            "url": "https://adnan.rihan.fr/"
         }
     ]
 }
