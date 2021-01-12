@@ -4,8 +4,8 @@ namespace Mx\Sqfix\Tests;
 
 use Illuminate\Database\Connection;
 use Illuminate\Database\Schema\Blueprint;
-use Mx\Sqfix\SchemaGrammar;
 use Mockery as m;
+use Mx\Sqfix\SchemaGrammar;
 
 class DatabaseSQLiteSchemaGrammarTest extends TestCase
 {
