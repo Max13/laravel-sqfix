@@ -62,6 +62,20 @@ class SchemaGrammar extends SQLiteSchemaGrammar
     /**
      * {@inheritdoc}
      */
+    protected function modifyNullable(Blueprint $blueprint, Fluent $column)
+    {
+        if (is_null($column->virtualAs) && is_null($column->storedAs)) {
+            return $column->nullable ? '' : ' not null';
+        }
+
+        if ($column->nullable === false) {
+            return ' not null';
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     protected function modifyIncrement(Blueprint $blueprint, Fluent $column)
     {
         if (in_array($column->type, $this->serials) && $column->autoIncrement) {
