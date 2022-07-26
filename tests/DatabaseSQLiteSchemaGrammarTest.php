@@ -110,7 +110,7 @@ class DatabaseSQLiteSchemaGrammarTest extends TestCase
         $this->assertSame('create table "users" ("foo" varchar not null, primary key ("foo"))', $statements[0]);
     }
 
-    protected function getConnection($connection = null)
+    protected function getConnection($connection = null, $table = null)
     {
         return m::mock(Connection::class);
     }
