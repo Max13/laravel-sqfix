@@ -4,6 +4,7 @@ namespace Mx\Sqfix\Tests;
 
 use Illuminate\Database\Connection;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Mockery as m;
 use Mx\Sqfix\SchemaGrammar;
 
@@ -112,7 +113,7 @@ class DatabaseSQLiteSchemaGrammarTest extends TestCase
 
     protected function getConnection($connection = null, $table = null)
     {
-        return m::mock(Connection::class);
+        return DB::connection();
     }
 
     public function getGrammar()
