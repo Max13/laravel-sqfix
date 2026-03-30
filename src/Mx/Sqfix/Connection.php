@@ -13,7 +13,7 @@ class Connection extends SQLiteConnection
      */
     protected function getDefaultQueryGrammar()
     {
-        return $this->withTablePrefix(new QueryGrammar);
+        return new QueryGrammar($this);
     }
     /**
      * Get the default schema grammar instance.
@@ -22,6 +22,6 @@ class Connection extends SQLiteConnection
      */
     protected function getDefaultSchemaGrammar()
     {
-        return $this->withTablePrefix(new SchemaGrammar);
+        return new SchemaGrammar($this);
     }
 }

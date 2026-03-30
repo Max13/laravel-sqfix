@@ -21,6 +21,14 @@ composer require max13/laravel-sqfix
 
 That’s it!
 
+## Compatibility list
+
+| Laravel         | Package version |
+|-----------------|-----------------|
+| 7, 8, 9, 10, 11 | `^v1.3.2`       |
+| 12, 13          | `^v1.4`         |
+
+
 ## Usage
 
 ```php

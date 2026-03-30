@@ -2,6 +2,7 @@
 
 namespace Mx\Sqfix;
 
+use Illuminate\Database\Connection;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Schema\Grammars\SQLiteGrammar as SQLiteSchemaGrammar;
 use Illuminate\Support\Fluent;
@@ -12,11 +13,9 @@ class SchemaGrammar extends SQLiteSchemaGrammar
      * Adds TrueAutoIncrement modifier to explicitely
      * use this keyword in SQLite
      */
-    public function __construct()
+    public function __construct(Connection $connection)
     {
-        if (method_exists(parent::class, '__construct')) {
-            parent::__construct();
-        }
+        parent::__construct($connection);
 
         $this->modifiers[] = 'TrueSyntax';
     }
